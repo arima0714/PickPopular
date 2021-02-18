@@ -16,5 +16,7 @@ jobs:
     #     ChannelAccessToken: ${{secrets.CHANNELACCESSTOKEN}}
       - name: exec scripts
         run: |
+          pwd
+          ls
           init.jl
           julia PickPopular.jl
