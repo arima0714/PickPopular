@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: set up julia
         uses: julia-actions/setup-julia@v1
-  exec:
-    steps:
-    runs-on: ubuntu-latest
     #  env:
     #     ChannelAccessToken: ${{secrets.CHANNELACCESSTOKEN}}
       - name: exec scripts
