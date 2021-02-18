@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     env:
-        ChannelAccessToken: ${{secrets.CHANNELACCESSTOKEN}}
-     uses: julia-actions/setup-julia@v1
-     run: init.jl
-     run: julia PickPopular.jl
+    #  env:
+    #     ChannelAccessToken: ${{secrets.CHANNELACCESSTOKEN}}
+      - uses: julia-actions/setup-julia@v1
+        run: init.jl
+        run: julia PickPopular.jl
