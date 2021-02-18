@@ -9,8 +9,8 @@ on: push
 jobs:
   setup:
     runs-on: ubuntu-latest
-      env:
-          ChannelAccessToken: ${{secrets.CHANNELACCESSTOKEN}}
+    env:
+        ChannelAccessToken: ${{secrets.CHANNELACCESSTOKEN}}
     steps:
       - name: set up julia
         uses: julia-actions/setup-julia@v1
