@@ -14,6 +14,8 @@ jobs:
         uses: julia-actions/setup-julia@v1
     #  env:
     #     ChannelAccessToken: ${{secrets.CHANNELACCESSTOKEN}}
+      - name: checkout
+        uses: actions/checkout@v1
       - name: exec scripts
         run: |
           pwd
