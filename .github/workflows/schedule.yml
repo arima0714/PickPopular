@@ -7,13 +7,14 @@ name: Scheduler
 on: push
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-latest
-
+    steps:
+      - name: set up julia
+        uses: julia-actions/setup-julia@v1
+  exec:
     steps:
     #  env:
     #     ChannelAccessToken: ${{secrets.CHANNELACCESSTOKEN}}
-      - name: set up julia
-        uses: julia-actions/setup-julia@v1
         run: init.jl
-        # run: julia PickPopular.jl
+        run: julia PickPopular.jl
