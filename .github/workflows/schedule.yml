@@ -16,5 +16,6 @@ jobs:
     steps:
     #  env:
     #     ChannelAccessToken: ${{secrets.CHANNELACCESSTOKEN}}
+      - name: exec scripts
         run: init.jl
         run: julia PickPopular.jl
