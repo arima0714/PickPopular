@@ -1,0 +1,22 @@
+@startuml diagram
+
+actor ユーザー
+
+cloud GitHubActions{
+    rectangle cron
+    rectangle JuliaContainer{
+        file ThisProgram
+    }
+}
+
+Cloud Konachan.com
+
+Cloud LINEbotAPI
+
+cron --> JuliaContainer :コンテナを定時(9:00)に起動
+JuliaContainer --> Konachan.com :スクレイピング
+Konachan.com --> JuliaContainer :24時間毎のランキング1位の詳細リンクを取得
+JuliaContainer --> LINEbotAPI :URLを送信
+LINEbotAPI --> ユーザー :URLを送信
+
+@enduml
